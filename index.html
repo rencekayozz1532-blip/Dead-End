@@ -36,7 +36,7 @@ table{color:#aaa;margin:6px auto 14px;font-size:14px;text-align:left}td{padding:
 #bFl{right:110px;bottom:112px;width:58px;height:58px}#bCr{right:194px;bottom:34px;width:58px;height:58px}
 #bPs{left:calc(50% - 50px);top:8px;width:42px;height:42px}#bMp{left:calc(50% + 8px);top:8px;width:42px;height:42px}
 #rot{display:none}@media(orientation:portrait){.touch #rot{display:flex;position:fixed;inset:0;z-index:30;background:#000;align-items:center;justify-content:center;font-size:22px;letter-spacing:.2em;color:#a11;text-align:center}}
-</style></head><body>
+</style><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#000000"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"></head><body>
 <canvas id="c" width="480" height="270"></canvas><div id="fx"></div>
 <div id="hud" hidden><div id="msg"></div><div id="prompt"></div><div id="info"></div><div id="cross"></div>
 <div id="bars"><div class="hl">STAMINA</div><div class="b"><i id="st"></i></div><div class="hl">FLASHLIGHT [F] <span id="bp"></span></div><div class="b"><i id="ba"></i></div><div class="hl" id="bt"></div></div>
@@ -479,4 +479,4 @@ else if(S==='pause'||S==='dead'||S==='win'){}
 else{g.fillStyle='rgba(0,0,0,.2)';g.fillRect(0,0,RW,RH);for(let i=0;i<5;i++){const x=(Math.sin(t*.1+i*1.7)*.5+.5)*RW,y=(Math.cos(t*.13+i*2.3)*.5+.5)*RH,gr=g.createRadialGradient(x,y,2,x,y,RH*.5);gr.addColorStop(0,'rgba(60,20,20,.05)');gr.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=gr;g.fillRect(0,0,RW,RH)}for(let i=0;i<30;i++){g.fillStyle=`rgba(140,0,0,${Math.random()*.1})`;g.fillRect(Math.random()*RW,Math.random()*RH,Math.random()*30,1)}}}
 setQ();requestAnimationFrame(loop);menu();
 })();
-</script></body></html>
+</script><script>if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script></body></html>
